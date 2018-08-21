@@ -1,11 +1,11 @@
 #!/bin/bash
-set -eux -o pipefail
+set -e -o pipefail
 
 CONF="$1"
-sudo openvpn "$CONF" > "$HOME/openvpn.log" &
+sudo openvpn "$CONF" | tee "$HOME/openvpn.log" &
 
 while [ `tail "$HOME/openvpn.log" | grep "Initialization Sequence Completed" | wc -l` == "0" ];
 do
-  # echo "still not done"
+  echo "... still waiting for OpenVPN to start"
   sleep 2
 done

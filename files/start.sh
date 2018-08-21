@@ -15,6 +15,9 @@ else
   echo "no OpenVPN config"
 fi
 
+# revoke sudo privileges after OpenVPN start
+sudo rm /etc/sudoers.d/user
+
 if [ ! -z ${ASSERT_COUNTRY+x} ]; then
   IP_COUNTRY=`curl ifconfig.co/country`
   echo " ---------------------------------------------------------------"
