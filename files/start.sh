@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
+COMMAND="$1"
+echo "$COMMAND"
 
 # If no profile ...
 if [ ! -d "$HOME/.mozilla" ]; then
@@ -30,4 +32,4 @@ if [ ! -z ${ASSERT_COUNTRY+x} ]; then
 fi
 
 # Start firefox
-firefox
+$COMMAND

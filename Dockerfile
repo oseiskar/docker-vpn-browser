@@ -24,3 +24,4 @@ COPY files/start-openvpn-blocking.sh /home/user/
 
 ENV HOME /home/user
 ENTRYPOINT ["/bin/bash", "/home/user/start.sh"]
+CMD ['firefox']

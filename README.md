@@ -10,10 +10,10 @@ without any cookies, history or such.
  2. (optional) Create a directory `openvpn` and put your `openvpn.conf` there.
     Make sure it's called `openvpn.conf` and all extra files it may need are
     also in the `openvpn/` directory (this will be mounted in the container)
- 3. Start container `./run.sh`
+ 3. Start container `./run.sh firefox`
 
- Also `ASSERT_COUNTRY=Finland ./run.sh` to check that ifconfig.co thinks that
- the your IP address is in a given country before starting Firefox.
+Also `ASSERT_COUNTRY=Finland ./run.sh firefox` to check that ifconfig.co thinks
+that the your IP address is in a given country before starting Firefox.
 
 ### Disclaimer
 
