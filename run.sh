@@ -6,6 +6,7 @@ docker run -ti --rm -e DISPLAY \
   -v `pwd`/openvpn:/etc/openvpn \
   -v `pwd`/shared:/home/user/Downloads \
   -e ASSERT_COUNTRY \
+  --name docker-vpn-browser-container \
   --dns 1.1.1.1 \
   docker-vpn-browser \
   "$@"
